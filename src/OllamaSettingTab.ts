@@ -140,7 +140,7 @@ export class OllamaSettingTab extends PluginSettingTab {
     this.plugin.settings.commands.forEach((command) => {
       new Setting(containerEl)
         .setName(command.name)
-        .setDesc(`${command.prompt} - ${command.model}`)
+        .setDesc(`${command.prompt}`)
         .addButton((button) =>
           button.setButtonText("Remove").onClick(async () => {
             this.plugin.settings.commands =
