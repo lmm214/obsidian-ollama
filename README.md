@@ -20,8 +20,11 @@ This requires a local installation of [Ollama](https://ollama.ai) which can curr
 ### DIY
 
 - 把原项目里的 PR 手动合在了一起
-- 加了中文提示
+- 加了命令的中文提示
 - 修改默认模型为 `mistral`
+- 修改默认端口，解决跨域问题。
+
+### 使用命令
 
 `OLLAMA_ORIGINS=*,app://obsidian.md* OLLAMA_HOST=127.0.0.1:11435 ollama serve`
 
