@@ -28,7 +28,20 @@ export class OllamaSettingTab extends PluginSettingTab {
             await this.plugin.saveSettings();
           })
       );
-
+    
+    new Setting(containerEl)
+        .setName("Stream")
+        .setDesc("Stream the output of the Ollama server.")
+        .addToggle((toggle) =>
+            toggle
+                .setValue(this.plugin.settings.stream)
+                  .onChange(async (value) => {
+                    this.plugin.settings.stream = value;
+                    await this.plugin.saveSettings();
+                  }
+                )
+        );
+    
     new Setting(containerEl)
       .setName("default model")
       .setDesc("Name of the default ollama model to use for prompts")
