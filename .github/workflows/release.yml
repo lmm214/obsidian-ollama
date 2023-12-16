@@ -3,9 +3,6 @@ name: Release Obsidian plugin
 on:
   watch:
     types: [started]
-  push:
-    tags:
-      - "*"
 
 env:
   PLUGIN_NAME: obsidian-ollama
